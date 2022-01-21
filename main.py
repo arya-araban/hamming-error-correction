@@ -19,7 +19,7 @@ def parity_2d(binary_num, k):
     """
     overall_parity = []
     lsts = list(split(binary_num, k))
-    print(lsts)
+    # print(lsts)
     for lst in lsts:
         overall_parity.append(0) if lst.count(1) % 2 == 0 else overall_parity.append(1)
     return overall_parity
@@ -27,11 +27,12 @@ def parity_2d(binary_num, k):
 
 def error_detection(sent_num, received_num):
     k = 4
-    sent_parity = parity_2d(sent_num, k)
-    print(sent_parity)
-    received_parity = parity_2d(received_num, k)
 
-    if sent_parity == received_parity:
+    if parity_2d(sent_num, k) == parity_2d(received_num, k):
         return False
 
     return True
+
+
+def error_correction(sent_num, received_num):
+    print("TODO")
