@@ -8,13 +8,10 @@ def split(a, n):
 
 
 def find_powers(num):
-    pows = []
     # this function finds all powers of 2 that are below "num"
+    pows = []
     for i in count(0):
         nm = 2 ** i
         if num < nm:
             return pows
         pows.append(nm)
-
-
-
