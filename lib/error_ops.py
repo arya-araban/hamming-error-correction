@@ -58,7 +58,7 @@ def error_correction(sent_block, received_block):
     for i in range(len(sent_parities)):
         if sent_parities[i] != received_parities[i]:
             error_bit += 2 ** i
-            print(error_bit)
+           # print(error_bit)
     return error_bit - len(pows)
 
 
